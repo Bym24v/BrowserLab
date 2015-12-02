@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="Bym24v">
+        <meta name="description" content="Demo">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MawLab | Monitor</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bower_components/bootstrap-table/dist/bootstrap-table.min.css">
+        <link rel="stylesheet" href="bower_components/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css">
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    </head>
+    <body>
+
+        <!-- Mapa -->
+        <div id="chartdiv"></div>
+
+        <!-- Leyenda -->
+        <div id="contador">
+
+            <div id="titulo-uno">
+                <p>Live 200</p>
+                <!-- Peticiones 200 -->
+                <div id="conDos">0</div>
+            </div>
+
+            <div id="titulo-dos">
+                <p>Live 304</p>
+                <!-- Peticiones 304 -->
+                <div id="conTres">0</div>
+            </div>
+
+            <div id="titulo-tres">
+                <p>Live 404</p>
+                <!-- Peticiones 404 -->
+                <div id="conCuatro">0</div>
+            </div>
+
+        </div>
+
+        <!-- Menu -->
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+
+            <!-- Titulos -->
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">MawLab | Monitor </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+              <ul class="nav navbar-nav navbar-right">
+                  <li><input id="config" class="btn btn-default" type="button" data-toggle="modal" data-target="#myModal" value="Config"></li>
+              </ul>
+
+            </div><!-- /.navbar-collapse -->
+
+          </div><!-- /.container-fluid -->
+        </nav>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-sn">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Configuracion</h4>
+                    </div>
+
+                    <div class="modal-body">
+                            <div class="checkbox checkbox-success">
+                                <input id="checkBorrar" type="checkbox">
+                                <label for="checkBorrar">Borrar log cada 5 minutos</label>
+                            </div><br>
+
+                            <div class="checkbox checkbox-success">
+                                <input type="urlServer" placeholder="ws://127.0.0.1/db"></p>
+                                <input id="checkBoxServer" type="checkbox">
+                                <label for="checkBoxServer">Direccion URL del servidor ( opcional )</label>
+                            </div><br>
+
+                            <div class="checkbox checkbox-success">
+                                <input id="checkbox1" type="checkbox"/>
+                                <label for="checkbox1">Prueba1</label>
+                            </div><br>
+
+                            <div class="checkbox checkbox-success">
+                                <input id="checkbox2" type="checkbox"/>
+                                <label for="checkbox2">Prueba2</label>
+                            </div><br>
+
+                            <div class="checkbox checkbox-success">
+                                <input id="checkbox3" type="checkbox"/>
+                                <label for="checkbox3">Prueba3</label>
+                            </div><br>
+
+                            <div class="checkbox checkbox-success">
+                                <input id="checkbox4" type="checkbox"/>
+                                <label for="checkbox4">Prueba4</label>
+                            </div><br>
+
+                            <!--<input id="btnGuardar" class="btn btn-default" type="button" onclick="guardar()" value="Guardar">-->
+                        </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Info -->
+        <!--<div class="alert alert-success" id="eventsResult">
+            Aqui se mostraran los resultados de los eventos.
+        </div>-->
+
+        <!-- Tabla--> <!-- data-url="chrome-extension://befpbbaofcbehogocohakbonacogfphb/data.json" -->
+        <table id="table"
+               data-toggle="table"
+               data-height="auto"
+               data-pagination="false"
+               data-search="true"
+               data-show-refresh="true"
+               data-show-toggle="true"
+               data-show-columns="true"
+               data-toolbar="#toolbar">
+            <thead>
+            <tr>
+                <!--<th data-field="state" data-checkbox="true"></th>-->
+                <th data-field="requestId">Request Id</th>
+                <th data-field="method">Method</th>
+                <th data-field="statusCode">StatusCode</th>
+                <th data-field="type">Type</th>
+                <th data-field="url">Url</th>
+            </tr>
+            </thead>
+            <tbody id="mbodyTable">
+            </tbody>
+        </table>
+
+        <!-- JS: MAP -->
+        <script src="assets/lib/map/ammap.js"></script>
+        <script src="assets/lib/map/worldLow.js"></script>
+        <script src="assets/lib/map/dark.js"></script>
+        <script src="map.js"></script>
+
+        <!-- JS: Lib -->
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower_components/bootstrap-table/dist/bootstrap-table-all.min.js"></script>
+        <script src="bower_components/bootstrap-table/dist/bootstrap-table-locale-all.min.js"></script>
+        <script src="filter.js"></script>
+        <script src="lang/lenguaje_es-AR.js"></script>
+
+        <!-- JS: APP -->
+        <script src="core/mawlab.js"></script>
+        <!--<script src="core/localStorage.js"></script>-->
+        <!--<script src="core/geoClient.js"></script>-->
+        <!--<script src="core/general.js"></script>-->
+        <script src="app.js"></script>
+        <!--<script src="core/socket.js"></script>-->
+
+    </body>
+</html>

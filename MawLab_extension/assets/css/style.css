@@ -1,0 +1,124 @@
+/* --------------------------- html -------------------------- */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html, body{
+    /*width: 100%;*/
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* --------------------------- Mapa ---------------------------*/
+#chartdiv {
+    background: #3f3f4f;
+    color:#ffffff;
+	width: 100%;
+	height: 100%;
+	font-size: 11px;
+}
+
+
+/*---------------------------- Menu -------------------------- */
+nav.navbar, .navbar-inverse{
+    border-color: #3F3F4F;
+    border-radius: 0px;
+}
+
+#config{
+    /*position: absolute;*/
+    /*width: 80px;*/
+    /*height: 50px;*/
+    /*margin-left: 93%;*/
+    margin-top: 8px;
+    /*border: 3px;*/
+    /*color: black;*/
+    /*background-color: #ffffff;*/
+    /*border-radius: 5px;*/
+    font-weight: bold;
+    /*cursor: pointer;*/
+}
+#titulo{
+    position: absolute;
+    width: 250px;
+    height: 35px;
+    margin-left: 25px;
+    margin-top: 6px;
+    font-family: sans-serif;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+
+/* --------------------------- Contador -----------------------*/
+#titulo-uno{
+    margin-left: 15px;
+    margin-top: 4px;
+    font-weight: bold;
+    color: #dddddd;
+}
+#titulo-dos{
+    position: absolute;
+    margin-left: 165px;
+    margin-top: -30px;
+    font-weight: bold;
+    color: #dddddd;
+}
+#titulo-tres{
+    margin-left: 315px;
+    margin-top: -30px;
+    font-weight: bold;
+    color: #dddddd;
+}
+#contador{
+    position: absolute;
+    width: 450px;
+    height: 25px;
+    margin-left: 30%;
+    margin-top: -25px;
+    background-color: grey;
+}
+#conDos{ /* 200 */
+    position: absolute;
+    width: 55px;
+    height: 20px;
+    bottom: 0px;
+    color: white;
+    margin-top: 5px;
+    margin-left: 65px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #86a965;
+}
+#conTres{ /* 304 */
+    position: relative;
+    width: 55px;
+    height: 20px;
+    bottom: 0px;
+    color: white;
+    margin-left: 65px;
+    margin-top: -29px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #8aabb0;
+}
+#conCuatro{ /* 404 */
+    position: absolute;
+    width: 55px;
+    height: 20px;
+    bottom: 0px;
+    color: white;
+    margin-left: 65px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #de4c4f;
+}
+
+
+
+/* ------------------------------- CheckBox --------------------------------------------*/
+
+.checkbox, .checkbox-success{
+    margin-left: 25px;
+}
