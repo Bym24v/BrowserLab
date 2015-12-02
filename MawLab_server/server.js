@@ -15,7 +15,6 @@ whois.tracer();
 // Log
 //debug.log();
 
-var mona = "Manuel";
 // server
 console.log("Name Server: " + config.name);
 console.log("Version Server: " +config.version);
