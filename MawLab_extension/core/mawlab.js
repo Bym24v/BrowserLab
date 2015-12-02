@@ -8,7 +8,8 @@ var Mawlab = {
         chrome.webRequest.onHeadersReceived.addListener(function(n) {
 
             // WebSockets
-            var ws = new WebSocket("ws://127.0.0.1:8000", "tpc");
+            //var ws = new WebSocket("ws://127.0.0.1:8000", "tpc");
+            var socket = io('http://localhost:8000');
 
             var log = document.getElementById('mbodyTable');
 
@@ -71,9 +72,8 @@ var Mawlab = {
                 }*/
 
                     // emviamos al server
-                    ws.onopen = function() {
-                        ws.send(JSON.stringify(cabecera));
-                    }
+                    socket.emit('message', JSON.stringify(cabecera));
+
                 };
 
                 cabeceraMarcadores.push(n);

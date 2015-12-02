@@ -2,10 +2,6 @@ var chkBorrar = document.getElementById('checkBorrar'); // si o no
 
 var getItemTable = localStorage.logBorrar;
 
-//var borrarLog = document.getElementById('logTimeline');
-//borrarLog.innerHTML = "";
-
-
 if(chkBorrar.checked === true){
     setTimeout(function(){ alert("Hello"); }, 3000);
 }

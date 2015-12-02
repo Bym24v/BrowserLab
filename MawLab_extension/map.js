@@ -1,9 +1,3 @@
-/*
-	although ammap has methos like getAreaCenterLatitude and getAreaCenterLongitude,
-	they are not suitable in quite a lot of cases as the center of some countries
-	is even outside the country itself (like US, because of Alaska and Hawaii)
-	That's why wehave the coordinates stored here
-*/
 
 var latlong = {};
 latlong["AD"] = {"latitude":42.5, "longitude":1.5};
@@ -72,7 +66,7 @@ latlong["EG"] = {"latitude":27, "longitude":30};
 latlong["EH"] = {"latitude":24.5, "longitude":-13};
 latlong["ER"] = {"latitude":15, "longitude":39};
 latlong["ES"] = {"latitude":40.409466, "longitude":-3.686060}; ///////////////////////////////
-latlong["YO"] = {"latitude":38.538650, "longitude":-0.123215};
+latlong["YO"] = {"latitude":40.409466, "longitude":-3.686060};
 latlong["ET"] = {"latitude":8, "longitude":38};
 latlong["EU"] = {"latitude":47, "longitude":8};
 latlong["FI"] = {"latitude":62, "longitude":26};
@@ -389,7 +383,7 @@ var mapData = [
 {"code":"SO" , "name":"Somalia", "value":9556873, "color":"#de4c4f"},
 {"code":"ZA" , "name":"South Africa", "value":50459978, "color":"#de4c4f"},
 {"code":"ES" , "name":"Spain", "value":46454895, "color":"#d8854f"},
-{"code":"YO" , "name":"Yo", "value":124149145, "label": "Yo", "color":"#ffffff"},         /////////////////////////////
+{"code":"YO" , "name":"Yo", "value":124149145, "label": "Yo", "color":"#ffffff"},         //////////////YO///////////////
 {"code":"LK" , "name":"Sri Lanka", "value":21045394, "color":"#eea638"},
 {"code":"SD" , "name":"Sudan", "value":34735288, "color":"#de4c4f"},
 {"code":"SR" , "name":"Suriname", "value":529419, "color":"#86a965"},

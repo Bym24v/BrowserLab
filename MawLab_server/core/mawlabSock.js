@@ -1,4 +1,5 @@
-var WebSocketServer = require('ws').Server;
+//var WebSocketServer = require('ws').Server;
+var io = require('socket.io')(8000);
 //var async = require('async');
 
 var mongo = require("../models/mongo.js");
@@ -9,24 +10,34 @@ var mawlab =  {
     get: function(){
 
         // WebSocketServer
-        var wss = new WebSocketServer({
-            host : '0.0.0.0',
-            port : 8000
-        });
+        //var wss = new WebSocketServer({
+            //host : '0.0.0.0',
+            //port : 8000
+        //});
 
         // WebSockets
-        wss.on('connection', function(ws) {
+        io.on('connection', function(socket) {
 
-            ws.on('message', function(data) {
+            socket.on('message', function(data) {
 
                 var entradaData = JSON.parse(data);
 
                 // Recorremos la data
                 for (var i = 0; i < entradaData.length; i++) {
 
+                    //console.log(entradaData[i].coords.longitude);
+                    //console.log(entradaData[i].coords.longitude);
+
                     if (entradaData[i].statusCode.toString() === "200") {
 
-                        mongo.guardar(entradaData[i]);
+                        //mongo.guardar(entradaData[i]);
+                        console.log(
+                                    "requestId: " + entradaData[i].requestId + " " +
+                                    "method: " + entradaData[i].method + " " +
+                                    "statusCode: " + entradaData[i].statusCode + " " +
+                                    "type: " + entradaData[i].type + " " +
+                                    "url: " + entradaData[i].url
+                                   );
                     };
                     if(entradaData[i].statusCode.toString() === "304"){
                         console.log("304");
@@ -36,7 +47,7 @@ var mawlab =  {
                     }
                 };
 
-                ws.close();
+                //socket.close();
 
 
 
