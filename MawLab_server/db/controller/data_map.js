@@ -8,7 +8,7 @@ var assert = require('assert');
 var ObjectId = require('mongodb').ObjectID;
 
 // Conectar
-var url = 'mongodb://localhost:27017/unity';
+var url = 'mongodb://localhost:27017/mawlab';
 //var config = require('./config.js');
 
 // MD5
