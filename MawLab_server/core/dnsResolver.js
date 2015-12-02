@@ -1,14 +1,14 @@
+var dns = require('dns');
 
-function yep(){
-    console.log("yep");
+function get(dominio){
+
+    dns.resolve4(dominio, function (err, addresses) {
+        if (err) throw err;
+        //console.log('addresses: ' + JSON.stringify(addresses));
+        console.log(JSON.stringify(addresses));
+
+    })
+
 };
 
-
-var mawlab2 = {
-
-    get: function(){
-        console.log("mala")
-    }
-};
-
-module.exports.mawlab2 = mawlab2;
+module.exports.get = get;
