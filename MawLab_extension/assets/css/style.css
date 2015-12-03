@@ -26,6 +26,10 @@ nav.navbar, .navbar-inverse{
     border-radius: 0px;
 }
 
+.alert-success{
+  margin-top: -20px;
+}
+
 #config{
     /*position: absolute;*/
     /*width: 80px;*/

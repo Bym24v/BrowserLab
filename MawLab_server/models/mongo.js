@@ -9,13 +9,13 @@ var config = require('../db/config.js');
 // Guardar tabla
 var guardarData = function(db, data, callback) {
 
-    db.collection('mawlabData').insertOne( {
+    db.collection('datas').insertOne( {
 
         "frameId": data.frameId,
         "method": data.method,
         "parentFrameId": data.parentFrameId,
         "requestId": data.requestId,
-        "responseHeaders": data.responseHeaders, // Array
+        "responseHeaders": data.responseHeaders,
         "statusCode": data.statusCode,
         "statusLine": data.statusLine,
         "tabId": data.tabId,
@@ -26,8 +26,6 @@ var guardarData = function(db, data, callback) {
     }, function(err, result) {
 
         assert.equal(err, null);
-
-        //console.log("Insertados los datos correctamente.");
 
         callback(result);
 

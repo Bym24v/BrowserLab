@@ -123,6 +123,7 @@
         <!-- Tabla--> <!-- data-url="chrome-extension://befpbbaofcbehogocohakbonacogfphb/data.json" -->
         <table id="table"
                data-toggle="table"
+               data-url="http://localhost:3000/api/products"
                data-height="auto"
                data-pagination="false"
                data-search="true"
@@ -131,16 +132,17 @@
                data-show-columns="true"
                data-toolbar="#toolbar">
             <thead>
-            <tr>
+              <tr>
                 <!--<th data-field="state" data-checkbox="true"></th>-->
                 <th data-field="requestId">Request Id</th>
                 <th data-field="method">Method</th>
                 <th data-field="statusCode">StatusCode</th>
                 <th data-field="type">Type</th>
                 <th data-field="url">Url</th>
-            </tr>
+              </tr>
             </thead>
             <tbody id="mbodyTable">
+
             </tbody>
         </table>
 

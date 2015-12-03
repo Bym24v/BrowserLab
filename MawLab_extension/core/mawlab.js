@@ -8,19 +8,18 @@ var Mawlab = {
         chrome.webRequest.onHeadersReceived.addListener(function(n) {
 
             // WebSockets
-            //var ws = new WebSocket("ws://127.0.0.1:8000", "tpc");
             var socket = io('http://localhost:8000');
 
-            var log = document.getElementById('mbodyTable');
+            //var log = document.getElementById('mbodyTable');
 
-                // Array get
+            // Cabecera
             var cabecera = [
                 {
                     frameId: n.frameId,
                     method: n.method,
                     parentFrameId: n.parentFrameId,
                     requestId: n.requestId,
-                    responseHeaders: n.responseHeaders, // importante
+                    responseHeaders: n.responseHeaders,
                     statusCode: n.statusCode,
                     statusLine: n.statusLine,
                     tabId: n.tabId,
@@ -36,14 +35,14 @@ var Mawlab = {
                 // 200
                 if (cabecera[i].statusCode === 200) {
 
-                    log.innerHTML +=
-                      "<tr>" +
-                        "<td>" + cabecera[i].requestId +
-                        "<td>" + cabecera[i].method +
-                        "<td>" + cabecera[i].statusCode +
-                        "<td>" + cabecera[i].type +
-                        "<td>" + cabecera[i].url +
-                      "<tr>";
+                    //log.innerHTML +=
+                      //"<tr>" +
+                        //"<td>" + cabecera[i].requestId +
+                        //"<td>" + cabecera[i].method +
+                        //"<td>" + cabecera[i].statusCode +
+                        //"<td>" + cabecera[i].type +
+                        //"<td>" + cabecera[i].url +
+                      //"<tr>";
 
                 }
 

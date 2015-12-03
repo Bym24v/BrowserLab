@@ -1,10 +1,10 @@
-(function(){
+
+var geoPosition = {
+
+  get: function(){
 
     var content = document.getElementById("eventsResult");
 
-    // WebSockets
-    //var ws = new WebSocket("ws://127.0.0.1:8000", "tpc");
-    //var socket = io('http://localhost:8000');
 
 	if (navigator.geolocation)
 	{
@@ -14,11 +14,6 @@
 			var lat = objPosition.coords.latitude;
 
 			content.innerHTML = "<p><strong>Latitud:</strong> " + lat + "</p><p><strong>Longitud:</strong> " + lon + "</p>";
-
-        //socket.on('message', function (data) {
-          //console.log(data);
-          //socket.emit(JSON.stringify(objPosition));
-        //});
 
 		}, function(objPositionError)
 		{
@@ -45,5 +40,8 @@
 	{
 		content.innerHTML = "Su navegador no soporta la API de geolocalización.";
 	}
-}());
+  }
 
+};
+
+geoPosition.get();
