@@ -78,7 +78,7 @@ var Mawlab = {
                 cabeceraMarcadores.push(n);
         }, {
                 urls: ["<all_urls>"],
-                types: ["main_frame", "sub_frame", "stylesheet", "script", "image", "object", "xmlhttprequest", "other"]
+                types: ["main_frame", "sub_frame", "script", "stylesheet", "object", "image", "xmlhttprequest", "other"]
         }, ["blocking", "responseHeaders"]);
     },
 
@@ -127,7 +127,6 @@ window.onload = function(){
     var noLink = document.getElementById('chartdiv');
     var noLinkFuck = noLink.children[0].children[0].children[1];
     noLinkFuck.innerHTML = "";
-    //console.log(noLinkFuck);
 
 };
 
@@ -160,5 +159,5 @@ window.onload = function(){
             "Url: " + a.url);
 }, {
     urls: ["<all_urls>"],
-    types: ["main_frame", "sub_frame", "stylesheet", "script", "image", "object", "xmlhttprequest", "other"]
+    types: ["main_frame", "sub_frame", "script", "stylesheet", "object", "image", "xmlhttprequest", "other"]
 }, ["requestHeaders"]);*/
