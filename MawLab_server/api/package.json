@@ -1,0 +1,13 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "Demo de ApiRestFul con Node.js + Express MongoDB",
+  "main": "index.js",
+  "author": "Bym24v",
+  "dependencies": {
+    "express": "^4.12.4",
+    "mongoose": "^4.0.5",
+    "body-parser": "*",
+    "node-restful": "*"
+  }
+}
