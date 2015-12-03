@@ -5,10 +5,11 @@ var mawlabSock = require("./core/mawlabSock.js");
 var config = require('./db/config.js');
 var whois = require('./core/whois.js');
 var dnsResolver = require('./core/dnsResolver.js');
-var debug = require("./core/debug.js");
+var debug = require('./core/debug.js');
+var apiRest = require('./api/apiRest.js');
 
 
-// WebSockets
+// Sockets
 mawlabSock.mawlab.get(); // iniciar
 
 // Whois
@@ -20,10 +21,12 @@ mawlabSock.mawlab.get(); // iniciar
 // Log
 //debug.log();
 
+// ApiRest
+apiRest.service();
+
 // server
 console.log("Server Preparado" +
             "\n" + " " + "\n" +
-            "Server Name: " +
-            config.name + "\n" +
+            "Server Name: " + config.name + "\n" +
             "Server Version: " + config.version);
 

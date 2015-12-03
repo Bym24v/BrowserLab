@@ -4,10 +4,13 @@
   "description": "Monitor all HTTP/HTTPs traffic from your browser.",
   "main": "server.js",
   "dependencies": {
-    "async": "^1.4.2",
+    "body-parser": "^1.14.1",
     "dns": "^0.2.2",
+    "express": "^4.13.3",
     "fs": "0.0.2",
     "mongodb": "^2.0.49",
+    "mongoose": "^4.2.9",
+    "node-restful": "^0.2.4",
     "node-whois": "^2.1.3",
     "socket.io": "^1.3.7",
     "util": "^0.10.3"
